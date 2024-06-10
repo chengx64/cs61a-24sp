@@ -21,16 +21,11 @@ def deep_map(f, s):
     True
     """
     "*** YOUR CODE HERE ***"
-    if type(s) != list:
-        return
-    elif len(s) == 0:
-        return
-    else:
-        for i in range(len(s)):
-            if type(s[i]) == int:
-                s[i] = f(s[i])
-            else:
-                deep_map(f, s[i])
+    for i in range(len(s)):
+        if type(s[i]) == int:
+            s[i] = f(s[i])
+        else:
+            deep_map(f, s[i])
 
 
 HW_SOURCE_FILE=__file__
